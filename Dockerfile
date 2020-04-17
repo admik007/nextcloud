@@ -1,4 +1,4 @@
-ROM debian:buster
+FROM debian:buster
 
 RUN echo "#Debian (10) Buster \n\
 deb http://ftp.debian.sk/debian/ buster main contrib non-free \n\
