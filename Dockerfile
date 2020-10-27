@@ -22,4 +22,4 @@ RUN apt-get -y install apache2 php php-xml php-zip php-soap php-mbstring php-gd 
 RUN wget https://download.nextcloud.com/server/releases/nextcloud-18.0.3.tar.bz2 && mv nextcloud-18.0.3.tar.bz2 /var/www/html/ && cd /var/www/html/ && bunzip2 nextcloud-18.0.3.tar.bz2 && tar -xvf nextcloud-18.0.3.tar && mv nextcloud/* . && rm -fr nextcloud* && chown www-data. /var/www/html/ -R
 RUN apt-get clean
 
-CMD /etc/init.d/mysql restart && /etc/init.d/apache2 restart && while true; do sleep 3600; done
+CMD /etc/init.d/postgresql restart && /etc/init.d/mysql restart && /etc/init.d/apache2 restart && while true; do sleep 3600; done
