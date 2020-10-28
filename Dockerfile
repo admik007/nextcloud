@@ -23,7 +23,7 @@ RUN wget https://download.nextcloud.com/server/releases/nextcloud-18.0.3.tar.bz2
 RUN apt-get clean
 
 ADD setup.sh /root/
-RUM chmod 755 /root/setup.sh
+RUN chmod 755 /root/setup.sh
 
 VOLUME [ " /var/www/html/data " ]
 
