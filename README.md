@@ -5,7 +5,7 @@ echo "CREATE DATABASE nextcloud;"  | mysql -u root
 
 echo "use mysql;"  | mysql -u root
 
-PWS=``pwgen 16``; echo ${PWS}; echo "GRANT ALL ON nextcloud.* to admin@localhost IDENTIFIED BY '${PWS}';"  | mysql -u root
+PWS=\`pwgen 16\`; echo ${PWS}; echo "GRANT ALL ON nextcloud.* to admin@localhost IDENTIFIED BY '${PWS}';"  | mysql -u root
 
 echo "FLUSH PRIVILEGES;"  | mysql -u root
 
