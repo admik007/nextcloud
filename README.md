@@ -10,3 +10,8 @@ echo "GRANT ALL ON nextcloud.* to admin@localhost IDENTIFIED BY 'admin';"  | mys
 echo "FLUSH PRIVILEGES;"  | mysql -u root
 
 sudo -u www-data php /var/www/html/occ files:scan --all
+
+
+-DELETE FROM oc_file_locks WHERE 1;
+config/config.php:
+'filelocking.enabled' => false,
