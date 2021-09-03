@@ -29,4 +29,4 @@ VOLUME [ " /var/www/html/data " ]
 
 RUN cp -pr /var/www/html /var/www/html-default && chown www-data. /var/www/html/data
 
-CMD /root/setup.sh && /etc/init.d/postgresql restart && /etc/init.d/mysql restart && /etc/init.d/apache2 restart && while true; do sleep 3600; done
+CMD if [ -f /root/setup.sh]; then bash /root/setup.sh; fi && /etc/init.d/postgresql restart && /etc/init.d/mysql restart && /etc/init.d/apache2 restart && while true; do sleep 3600; done
