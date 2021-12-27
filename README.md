@@ -15,7 +15,7 @@ echo "delete from db where User='admin';" | mysql -u root
 echo "delete from user where User='admin';" | mysql -u root
 
 ### Rescan files for all users
-sudo -u www-data php /var/www/html/occ files:scan --all
+sudo -u www-data PHP_MEMORY_LIMIT=512M php /var/www/html/occ files:scan --all
 
 ### In case of rescan error
 -DELETE FROM oc_file_locks WHERE 1;
