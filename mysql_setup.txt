@@ -1,0 +1,5 @@
+mysql -u root -p
+CREATE DATABASE nextclouddb;
+GRANT ALL ON nextclouddb.* TO 'nextcloud_user'@'localhost' IDENTIFIED BY 'strong password';
+FLUSH PRIVILEGES;
+EXIT;
